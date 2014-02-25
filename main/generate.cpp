@@ -19,7 +19,7 @@ int main()//(int argc, char *argv[])
   // parameters
   RooRealVar width("width", "gaussian width", 2.,   0., 10.);
   RooRealVar mean ("mean",  "gaussian mean",  0., -10., 10.);
-  RooRealVar decay("decay", "decay coeff",   0.5,  0.01, 1.0);
+  RooRealVar decay("decay", "decay coeff",   -0.5, -1.0, 0.);
 
   // instantiate the custom pdf
   RooExpAndGauss pdf("pdf", "custom pdf", x, mean, width, decay);
