@@ -1,4 +1,4 @@
 obj/*.o
-obj/*.so
+lib/*.so
 dict/*
 bin/*
