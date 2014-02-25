@@ -37,6 +37,7 @@ protected:
   Double_t evaluate() const ;
 
 private:
+  ClassDef(RooExpAndGauss, 1);
 
 };
  

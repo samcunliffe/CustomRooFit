@@ -16,6 +16,7 @@
 #include "RooExpAndGauss.hpp" 
 #include "RooAbsReal.h" 
 #include <iostream> 
+ClassImp(RooExpAndGauss);
 
 RooExpAndGauss::RooExpAndGauss(const char *name, const char *title, 
 			       RooAbsReal& _x,

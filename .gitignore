@@ -1,2 +1,4 @@
 obj/*.o
 obj/*.so
+dict/*
+bin/*
