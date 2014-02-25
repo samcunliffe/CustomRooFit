@@ -1,4 +1,4 @@
-customRooFit
+CustomRooFit
 ============
 
 Minimal working example of a project with a custom roofit pdf.
