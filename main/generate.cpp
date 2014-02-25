@@ -36,7 +36,7 @@ int main()//(int argc, char *argv[])
   toydata->plotOn(plot);
   pdf.plotOn(plot);
   plot->Draw();
-  canvas.SaveAs("plot/fittedRooExpAndGauss.pdf");
+  canvas.SaveAs("plots/fittedRooExpAndGauss.pdf");
 
   // tidy up
   delete toydata;

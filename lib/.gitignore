@@ -1,0 +1,2 @@
+# shared objects for the project get put in here, don't commit them
+*.so

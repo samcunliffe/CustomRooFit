@@ -1,0 +1,2 @@
+# objects from compilation go in here, don't commit them
+*.o
