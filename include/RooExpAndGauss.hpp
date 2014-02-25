@@ -9,8 +9,8 @@
  * listed in LICENSE (http://roofit.sourceforge.net/license.txt)             *
  *****************************************************************************/
 
-#ifndef RooExpAndGauss_h
-#define RooExpAndGauss_h
+#ifndef ROOEXPANDGAUSS_H
+#define ROOEXPANDGAUSS_H
 
 #include "RooAbsPdf.h"
 #include "RooRealProxy.h"
@@ -18,6 +18,7 @@
  
 class RooExpAndGauss : public RooAbsPdf {
 public:
+  RooExpAndGauss(); // default constructor to make RooFit workspaces happy
   RooExpAndGauss(const char *name, const char *title,
 	      RooAbsReal& _x,
 	      RooAbsReal& _sh_mean,
@@ -41,4 +42,4 @@ private:
 
 };
  
-#endif
+#endif // ROOEXPANDGAUSS_H

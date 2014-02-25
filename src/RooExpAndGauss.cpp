@@ -10,13 +10,25 @@
   *****************************************************************************/ 
 
  // -- CLASS DESCRIPTION [PDF] -- 
- // Your description goes here... 
+ // A gaussian function with an exponential tail.
 
 #define RooExpAndGauss_cxx
 #include "RooExpAndGauss.hpp" 
+#include "RooRealVar.h"
 #include "RooAbsReal.h" 
 #include <iostream> 
 ClassImp(RooExpAndGauss);
+
+RooExpAndGauss::RooExpAndGauss() // default constructor to make RooFit workspaces happy
+{
+  RooRealVar x("xRV","x", 0.0, 1.0);
+  RooRealVar sh_mean("sh_mean", "sh_mean", 0.0, 1.0);
+  RooRealVar sh_sigma("sh_sigma","sh_sigma", 0.0, 1.0);
+  RooRealVar sh_trans("sh_trans","sh_trans", 0.0, 1.0);
+
+  RooExpAndGauss("RooExpAndGauss", "RooExpAndGauss", x, sh_mean, sh_sigma, sh_trans);
+}
+
 
 RooExpAndGauss::RooExpAndGauss(const char *name, const char *title, 
 			       RooAbsReal& _x,
