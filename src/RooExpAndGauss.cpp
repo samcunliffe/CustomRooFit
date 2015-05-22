@@ -1,23 +1,9 @@
- /***************************************************************************** 
-  * Project: RooFit                                                           * 
-  *                                                                           * 
-  * Copyright (c) 2000-2005, Regents of the University of California          * 
-  *                          and Stanford University. All rights reserved.    * 
-  *                                                                           * 
-  * Redistribution and use in source and binary forms,                        * 
-  * with or without modification, are permitted according to the terms        * 
-  * listed in LICENSE (http://roofit.sourceforge.net/license.txt)             * 
-  *****************************************************************************/ 
+#define ROOEXPANDGAUSS_CXX
 
- // -- CLASS DESCRIPTION [PDF] -- 
- // A gaussian function with an exponential tail.
-
-#define RooExpAndGauss_cxx
 #include "RooExpAndGauss.hpp" 
 #include "RooRealVar.h"
-#include "RooAbsReal.h" 
-#include <iostream> 
-ClassImp(RooExpAndGauss);
+
+ClassImp(RooExpAndGauss)
 
 RooExpAndGauss::RooExpAndGauss() // default constructor to make RooFit workspaces happy
 {
@@ -62,13 +48,11 @@ RooExpAndGauss::RooExpAndGauss(const RooExpAndGauss& other, const char* name) :
 
 Double_t RooExpAndGauss::evaluate() const 
 { 
-  // ENTER EXPRESSION IN TERMS OF VARIABLE ARGUMENTS HERE 
   double beta = (sh_mean - sh_trans)/(sh_sigma*sh_sigma);
   double c = exp(-0.5*pow((sh_trans-sh_mean)/sh_sigma,2))*exp(-beta*sh_trans);
   if (x <= sh_trans){ 
     return c*exp(beta*x);
   };
-  
   return exp(-0.5*pow((x-sh_mean)/sh_sigma,2)); //think a 1/2 was missed before BsMuMuPy v4.4
 } 
 
