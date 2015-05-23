@@ -29,7 +29,7 @@ class RooExpAndGauss : public RooAbsPdf
   Double_t evaluate() const ;
 
  private:
-  ClassDef(RooExpAndGauss, 1)
+  ClassDef(RooExpAndGauss, 2)
 
 };
 

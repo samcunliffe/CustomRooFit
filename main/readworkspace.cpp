@@ -33,7 +33,8 @@ int main()
   canvas.SaveAs("plots/afterSavingWorkspaceExpAndGauss.pdf");
 
   // tidy up
+  //delete x; delete pdf; delete ws; 
+  //delete plot;
   wsfile.Close();
-  delete plot;
   return 0;
 }

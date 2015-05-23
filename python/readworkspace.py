@@ -4,12 +4,13 @@
 # import things from ROOT
 from ROOT import TFile, TCanvas, RooWorkspace
 
-# load this project's library
-from utils import load_shared_object
-load_shared_object()
-from ROOT import RooExpAndGauss
 
 def main():
+    # load this project's library
+    from utils import load_shared_object
+    load_shared_object()
+    from ROOT import RooExpAndGauss
+
     # open the file
     wsfile = TFile("workspace.root", "READ")
     ws = wsfile.Get("ws")

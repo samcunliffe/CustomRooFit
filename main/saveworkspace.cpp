@@ -39,6 +39,9 @@ int main()
   RooWorkspace ws("ws", "ws");
 
   // write the pdf to it
+  ws.addClassDeclImportDir("./include/");
+  ws.addClassImplImportDir("./src/");
+  ws.importClassCode(RooExpAndGauss::Class(),kTRUE);
   ws.import(pdf);
   ws.Write();
 
