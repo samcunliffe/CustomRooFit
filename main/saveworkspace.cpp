@@ -38,10 +38,13 @@ int main()
   TFile wsfile("workspace.root", "RECREATE");
   RooWorkspace ws("ws", "ws");
 
-  // write the pdf to it
+  // save the code...
+  // https://root.cern.ch/phpBB3/viewtopic.php?f=15&t=12695
   ws.addClassDeclImportDir("./include/");
   ws.addClassImplImportDir("./src/");
   ws.importClassCode(RooExpAndGauss::Class(),kTRUE);
+
+  // save the pdf and all parameters
   ws.import(pdf);
   ws.Write();
 
